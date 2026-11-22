@@ -1,0 +1,10 @@
+# Prepared entry for https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+# Target path after fork: data/plugins/OrphBladean__dsh-nahida-theme.yml
+# Eligibility: the list requires the repository to be at least 1 day old
+# (created 2026-11-22T03:23:12Z; eligible from 2026-11-23T03:23:12Z / 11:23 +08).
+url: https://github.com/OrphBladean/dsh-nahida-theme
+name: OrphBladean/dsh-nahida-theme
+category: theme
+description:
+  en: Nahida-themed Web UI skin with a dendro palette layer, an original brand mark, a rotating localized blessing line, and drifting leaves.
+  zh: 纳西妲主题的 Web 界面皮肤：草元素配色层、原创徽记、轮播祝福语与飘落叶片。
