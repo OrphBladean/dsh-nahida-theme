@@ -1,0 +1,6 @@
+# Nahida theme: one Loader row for the bundle. The browser half is discovered
+# through package.json's dsh.client declaration, so no separate Client row is
+# needed here.
+- insert:
+    - id: nahida-theme
+      name: '@local/nahida-theme'
