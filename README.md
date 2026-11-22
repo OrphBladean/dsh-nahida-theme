@@ -1,6 +1,7 @@
 # dsh-nahida-theme · 纳西妲主题
 
 [![license](https://img.shields.io/badge/license-MIT-4e9b3f)](LICENSE)
+[![npm](https://img.shields.io/npm/v/dsh-nahida-theme?label=npm&color=4e9b3f)](https://www.npmjs.com/package/dsh-nahida-theme)
 [![GitHub stars](https://img.shields.io/github/stars/OrphBladean/dsh-nahida-theme?color=4e9b3f)](https://github.com/OrphBladean/dsh-nahida-theme)
 [![Made with DSH](https://img.shields.io/badge/made%20with-DeepSeek%20Harness-4e9b3f)](https://github.com/deepseek-ai/dsh)
 [![dsh plugin](https://img.shields.io/badge/dsh-plugin-4e9b3f)](https://github.com/deepseek-ai/dsh)
@@ -11,7 +12,7 @@
 
 > **English** — A dendro-green Nahida skin for the DSH Web GUI: a small alias-token layer over the active light/dark theme, an original chibi “little radish” brand mark, a rotating localized blessing line below the composer, and click-through drifting leaves. Theme-token overrides only; uninstalling restores everything.
 >
-> Install: `dsh plugin --profile web add github:OrphBladean/dsh-nahida-theme` — then reload the page. UI text follows the DSH locale (zh / en / ja).
+> Install (npm): `dsh plugin --profile web add dsh-nahida-theme` — or from GitHub: `dsh plugin --profile web add github:OrphBladean/dsh-nahida-theme`. Reload the page afterwards. UI text follows the DSH locale (zh / en / ja).
 
 > **Made with DSH · 由 DSH 制作**
 > 这个插件的代码、文案、原创图标、测试与仓库文档，全部都写在 [DeepSeek Harness](https://github.com/deepseek-ai/dsh) 里：由 DSH agent 编写、在本机 `web` profile 安装、通过插槽与令牌验证，再整理成这个仓库。仓库组织与 README 体例参考了社区里的另一份主题插件 [dsh-cyrene-theme](https://github.com/berhbro/dsh-cyrene-theme)。
@@ -29,7 +30,13 @@
 
 ## 安装
 
-### GitHub 源（推荐）
+### npm（推荐）
+
+```bash
+dsh plugin --profile web add dsh-nahida-theme
+```
+
+### GitHub 源（跟随最新提交）
 
 ```bash
 dsh plugin --profile web add github:OrphBladean/dsh-nahida-theme
