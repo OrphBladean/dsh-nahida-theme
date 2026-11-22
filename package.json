@@ -1,33 +1,16 @@
 {
-  "name": "@local/nahida-theme",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Nahida theme for the DSH Web GUI: dendro-green palette, a blessing line above the composer, a themed brand mark, and softly drifting leaves.",
+  "name": "dsh-nahida-theme",
+  "version": "0.1.0",
+  "description": "纳西妲主题：草元素绿意配色 + 纳西妲徽记 + 祝福语 + 飘落叶片｜A Nahida theme for the DeepSeek Harness (DSH) Web GUI. Made with DSH.",
   "type": "module",
+  "main": "lib/index.js",
   "exports": {
-    ".": "./index.js",
-    "./client": "./client.js",
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
     "./locale/*.json": "./locale/*.json",
-    "./icon": "./icon.svg"
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
   },
-  "files": [
-    "index.js",
-    "client.js",
-    "cordis.patch.yml",
-    "locale/*.json",
-    "icon.svg",
-    "README.md",
-    "LICENSE"
-  ],
-  "keywords": [
-    "dsh",
-    "deepseek-harness",
-    "dsh-plugin",
-    "theme",
-    "nahida",
-    "dendro"
-  ],
-  "license": "MIT",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -41,5 +24,37 @@
         "@deepseek-ai/dsh-client-ui-conversation"
       ]
     }
-  }
+  },
+  "files": [
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs",
+    "test",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "skin",
+    "nahida",
+    "dendro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berhbro/dsh-nahida-theme.git"
+  },
+  "homepage": "https://github.com/berhbro/dsh-nahida-theme#readme",
+  "bugs": {
+    "url": "https://github.com/berhbro/dsh-nahida-theme/issues"
+  },
+  "author": "berhbro",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
 }

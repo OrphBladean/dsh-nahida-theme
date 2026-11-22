@@ -1,6 +1,5 @@
-# Nahida theme: one Loader row for the bundle. The browser half is discovered
-# through package.json's dsh.client declaration, so no separate Client row is
-# needed here.
+# 纳西妲主题 bundle patch：把本包插入 profile 的插件树。
+# 安装：dsh plugin --profile web add github:berhbro/dsh-nahida-theme
 - insert:
-    - id: nahida-theme
-      name: '@local/nahida-theme'
+    - id: ui-nahida-theme
+      name: dsh-nahida-theme

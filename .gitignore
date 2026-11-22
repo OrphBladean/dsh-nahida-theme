@@ -1,3 +1,16 @@
+# 依赖与缓存
 node_modules/
+
+# 日志与系统垃圾
 *.log
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.idea/
+.vscode/
+
+# 运行环境
+__pycache__/
+*.py[cod]
