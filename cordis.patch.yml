@@ -1,5 +1,5 @@
 # 纳西妲主题 bundle patch：把本包插入 profile 的插件树。
-# 安装：dsh plugin --profile web add github:berhbro/dsh-nahida-theme
+# 安装：dsh plugin --profile web add github:OrphBladean/dsh-nahida-theme
 - insert:
     - id: ui-nahida-theme
       name: dsh-nahida-theme
