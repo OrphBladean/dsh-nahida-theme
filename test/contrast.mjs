@@ -74,7 +74,11 @@ const cases = [
   ['blessing text (light)', HOST.light.labelSecondary, pair('--dsw-alias-bg-base', 'light')],
   ['blessing text (dark)', HOST.dark.labelSecondary, pair('--dsw-alias-bg-base', 'dark')],
   ['sidebar text (light)', HOST.light.labelPrimary, pair('--dsw-specific-sidebar-fill', 'light')],
-  ['sidebar text (dark)', HOST.dark.labelPrimary, pair('--dsw-specific-sidebar-fill', 'dark')]
+  ['sidebar text (dark)', HOST.dark.labelPrimary, pair('--dsw-specific-sidebar-fill', 'dark')],
+  // Flat translucent pane over a white wallpaper: rgba(10,66,38,.22)
+  // composites to #c9d5cf without any blur; the pane uses dark-green ink.
+  ['glass card text', '#0b2a1b', '#c9d5cf'],
+  ['glass card secondary', '#143a27', '#c9d5cf']
 ];
 
 const MINIMUM = 4.5; // WCAG AA for normal text
