@@ -140,9 +140,19 @@ node test/contrast.mjs   # 6 个覆盖令牌的 10 项 WCAG AA 对比度断言
 - **Unofficial fan project.** 纳西妲（Nahida）及《原神》相关名称、角色设定 © HoYoverse / miHoYo。本插件与 HoYoverse、miHoYo、DeepSeek 均无隶属或背书关系。
 - 徽记、叶片、花朵、横幅与插件图标均为本仓库原创的向量插画，**没有使用任何游戏内素材**；角色形象只做了低分辨率 Q 版示意。
 - `lib/assets/wallpapers/` 里的 15 张壁纸是**用户自行提供**的同人插画，仅供个人主题使用；其版权归原作者与 HoYoverse / miHoYo 所有，**不在本仓库 MIT 许可的授权范围内**。如果你是权利人并希望移除其中某张，请开 issue，我会删除对应文件。
-- 感谢 [Windows-Nahida](https://github.com/Windows-Nahida) 贡献的四叶草视觉、壁纸、毛玻璃卡片与设置页（PR #1）。
+- 感谢所有通过 Pull Request 参与本项目的贡献者，完整名单见文末 [PR 贡献者](#pr-贡献者)。
 - **Made with DSH**: 本项目由 DeepSeek Harness 的 agent 完成编码、安装、验证与文档整理；仓库组织与 README 结构参考了 [dsh-cyrene-theme](https://github.com/berhbro/dsh-cyrene-theme)。感谢 DSH 把插槽、主题令牌与插件管理器开放到可以被这样改造。
 - 感谢纳西妲角色带来的灵感。
+
+## PR 贡献者
+
+感谢以下通过 Pull Request 为纳西妲主题做出贡献的人（按合并时间排序）：
+
+| 贡献者 | PR | 贡献内容 |
+| --- | --- | --- |
+| [@Windows-Nahida](https://github.com/Windows-Nahida) | [#1](https://github.com/OrphBladean/dsh-nahida-theme/pull/1) | 四叶草视觉、15 张聊天壁纸与设置页、单色透明卡片、DOS 短横线光标、侧边栏余额/上下文卡（0.2.0 UI 更新） |
+
+> 想出现在这里？欢迎提交 PR——代码、文案、壁纸授权说明或截图都可以。
 
 ## 目录
 
@@ -155,6 +165,7 @@ node test/contrast.mjs   # 6 个覆盖令牌的 10 项 WCAG AA 对比度断言
 - [自检](#自检)
 - [兼容与已知限制](#兼容与已知限制)
 - [版权与致谢](#版权与致谢)
+- [PR 贡献者](#pr-贡献者)
 
 ## License
 
