@@ -7,7 +7,7 @@
 
 - GitHub：https://github.com/OrphBladean/dsh-nahida-theme
 - npm：https://www.npmjs.com/package/dsh-nahida-theme
-- Release：https://github.com/OrphBladean/dsh-nahida-theme/releases/tag/v0.2.0
+- Release：https://github.com/OrphBladean/dsh-nahida-theme/releases
 - 安装：`dsh plugin --profile web add dsh-nahida-theme`
 
 ## 一句话
@@ -67,3 +67,4 @@ Made with DSH. Unofficial fan project; original artwork only.
 2. 发到有 DSH 用户的群 / 社区，比发在无人看的动态更有效。
 3. 同一个链接可以在 GitHub 话题页里被搜到：仓库已经带 `dsh-plugin` topic，DSH 插件市场会收录。
 4. 不要在短时间内重复刷屏；真实的使用反馈比 star 更有价值。
+5. 壁纸层需要宿主提供 `conversation.hero.frame` 插槽；在暂未提供该插槽的 DSH 版本（如 0.2.2-rc.1）上，设置页能打开但壁纸不显示，发布时可按自己的版本说明。

@@ -99,7 +99,9 @@ dsh-nahida-theme/
 │   ├── zh.json
 │   └── ja.json
 ├── docs/
-│   └── banner.svg        # 原创主题横幅（插画，不是界面截图）
+│   ├── banner.svg        # 原创主题横幅（插画，不是界面截图）
+│   ├── share.md          # 发布 / 分享文案包
+│   └── awesome-dsh-plugin.yml  # awesome-dsh-plugin 收录条目（待提交）
 ├── test/
 │   ├── smoke.mjs         # 清单 / 资源 / 壁纸 / Client 半端插槽与令牌冒烟测试
 │   └── contrast.mjs      # 覆盖令牌的 WCAG 对比度检查
@@ -115,11 +117,11 @@ dsh-nahida-theme/
 不装插件、不开浏览器也能跑：
 
 ```bash
-node test/smoke.mjs      # manifest、locale、icon、Host 半端、Client 半端 4 处插槽注册
-node test/contrast.mjs   # 6 个覆盖令牌 × 深浅两套色板的 WCAG AA 对比度
+node test/smoke.mjs      # manifest、locale、icon、Host 半端、Client 半端 8 处插槽注册
+node test/contrast.mjs   # 6 个覆盖令牌的 10 项 WCAG AA 对比度断言
 ```
 
-`smoke.mjs` 用 `node:vm` 加一个假的 `__ModuleLoader__`、最小 React stub 和记录型 Cordis context 执行 `lib/client.js`，会真正调用 `apply()` 并渲染 7 个插槽组件，还会检查 15 张壁纸与缩略图是否齐全、体积是否在预算内，能抓到模块导出、插槽名、优先级、id、资源与组件渲染层面的低级错误。
+`smoke.mjs` 用 `node:vm` 加一个假的 `__ModuleLoader__`、最小 React stub 和记录型 Cordis context 执行 `lib/client.js`，会真正调用 `apply()` 并渲染 8 个插槽组件，还会检查 15 张壁纸与缩略图是否齐全、体积是否在预算内，能抓到模块导出、插槽名、优先级、id、资源与组件渲染层面的低级错误。
 
 ## 兼容与已知限制
 
@@ -129,7 +131,7 @@ node test/contrast.mjs   # 6 个覆盖令牌 × 深浅两套色板的 WCAG AA �
 - 依赖宿主已有的 `slots`、`theme`、`locale` 服务；服务缺失时插件不会激活，不会影响其他插件。
 - 侧边栏品牌位是以更低 `priority` 覆盖官方标志的，属于该插槽允许的替换方式；若未来宿主改了座位或出现同优先级的其他覆盖者，本插件只跳过该处装饰，其余效果不受影响。
 - 飘落叶片层与壁纸层均为 `pointer-events: none`，不拦截点击；对系统「减少动态效果」做了降级。
-- 壁纸层只覆盖 `[data-conversation-content]`，依赖宿主保留这个数据属性；属性改名时壁纸会退化为不显示，但不会破坏布局。
+- 壁纸层依赖 `conversation.hero.frame` 插槽，并只覆盖 `[data-conversation-content]`；宿主没有该插槽时（例如当前 0.2.2-rc.1），设置页仍能打开和选择壁纸，但聊天区不会显示壁纸、右下角悬浮四叶草按钮也不会出现；宿主保留该插槽后自动生效。属性改名时壁纸同样会退化为不显示，但不会破坏布局。
 - 本仓库不含界面截图，原因见「预览」。
 - 与其他主题插件共存时，令牌覆盖层按加载顺序叠加；本插件不修改宿主主题注册表。
 
@@ -138,6 +140,7 @@ node test/contrast.mjs   # 6 个覆盖令牌 × 深浅两套色板的 WCAG AA �
 - **Unofficial fan project.** 纳西妲（Nahida）及《原神》相关名称、角色设定 © HoYoverse / miHoYo。本插件与 HoYoverse、miHoYo、DeepSeek 均无隶属或背书关系。
 - 徽记、叶片、花朵、横幅与插件图标均为本仓库原创的向量插画，**没有使用任何游戏内素材**；角色形象只做了低分辨率 Q 版示意。
 - `lib/assets/wallpapers/` 里的 15 张壁纸是**用户自行提供**的同人插画，仅供个人主题使用；其版权归原作者与 HoYoverse / miHoYo 所有，**不在本仓库 MIT 许可的授权范围内**。如果你是权利人并希望移除其中某张，请开 issue，我会删除对应文件。
+- 感谢 [Windows-Nahida](https://github.com/Windows-Nahida) 贡献的四叶草视觉、壁纸、毛玻璃卡片与设置页（PR #1）。
 - **Made with DSH**: 本项目由 DeepSeek Harness 的 agent 完成编码、安装、验证与文档整理；仓库组织与 README 结构参考了 [dsh-cyrene-theme](https://github.com/berhbro/dsh-cyrene-theme)。感谢 DSH 把插槽、主题令牌与插件管理器开放到可以被这样改造。
 - 感谢纳西妲角色带来的灵感。
 
