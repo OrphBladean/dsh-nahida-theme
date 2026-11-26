@@ -56,9 +56,12 @@ dsh plugin --profile web add /path/to/dsh-nahida-theme
 
 ## 预览
 
-![插件图标](icon.svg)
+![浅色主题 · 聊天区壁纸](docs/screenshots/light.png)
 
-仓库里的横幅与图标都是为这个主题原创的插画，不是界面截图。本仓库目前不包含 UI 截图：生成它的 DSH 会话运行在无浏览器渲染控制的远程环境里，无法截取真实界面；如果你在本地装好，欢迎把 `docs/screenshots/` 补上真实截图。
+![深色主题 · 聊天区壁纸](docs/screenshots/dark.png)
+
+真实界面截图（已裁掉侧边栏里的个人会话与余额信息），使用内置壁纸 `flower-sea-aranara`；浅色与深色各一张。
+`docs/social-preview.png` 是 1280×640 的社交预览图，可在 GitHub 仓库 **Settings → Social preview** 手动上传。
 
 ## 使用
 
@@ -100,13 +103,16 @@ dsh-nahida-theme/
 │   └── ja.json
 ├── docs/
 │   ├── banner.svg        # 原创主题横幅（插画，不是界面截图）
+│   ├── social-preview.png # 1280×640 社交预览图（手动上传到 GitHub）
+│   ├── screenshots/      # 真实界面截图（浅色 / 深色）
 │   ├── share.md          # 发布 / 分享文案包
-│   └── awesome-dsh-plugin.yml  # awesome-dsh-plugin 收录条目（待提交）
+│   └── awesome-dsh-plugin.yml  # awesome-dsh-plugin 收录条目
 ├── test/
 │   ├── smoke.mjs         # 清单 / 资源 / 壁纸 / Client 半端插槽与令牌冒烟测试
 │   └── contrast.mjs      # 覆盖令牌的 WCAG 对比度检查
 ├── cordis.patch.yml      # bundle patch：插入 ui-nahida-theme 行
 ├── icon.svg              # 原创四叶草插件图标
+├── screenshots.json      # 市场/详情页截图清单
 ├── package.json
 ├── README.md
 └── LICENSE

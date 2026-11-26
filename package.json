@@ -35,6 +35,7 @@
     "locale/*.json",
     "icon.svg",
     "docs",
+    "screenshots.json",
     "test",
     "README.md",
     "LICENSE"
