@@ -241,6 +241,7 @@ check(
   'locale dictionaries carry blessing and settings keys',
   localeCalls.every((call) => [
     'quote1', 'quote2', 'quote3', 'nav', 'title', 'wallpaper', 'veil', 'open', 'close', 'done',
+    'appearance', 'palette', 'leavesToggle', 'blessingToggle', 'sessionMarkToggle', 'quotes',
     ...wallpaperNameKeys
   ].every((key) => typeof call.dict[key] === 'string'))
 );
@@ -252,6 +253,7 @@ const expected = [
   ['conversation.hero.brand.mark', {}],
   ['conversation.composer.dock', { id: 'nahida-theme.blessing', order: 10 }],
   ['shell.overlay', { id: 'nahida-theme.leaves', order: -10 }],
+  ['sidebar.session.row.leading', { id: 'nahida-theme.session-mark', order: 20 }],
   ['conversation.hero.frame', { id: 'nahida-theme.wallpaper', order: 20, locale: 'nahida-theme' }],
   ['sidebar.footer.action', { id: 'nahida-theme.balance-context', order: -10, locale: 'nahida-theme' }],
   ['settings.section', { id: 'nahida-theme', order: 50, locale: 'nahida-theme' }],
@@ -265,7 +267,7 @@ for (const [slot, expectedOptions] of expected) {
     check(`  ${slot} ${key}`, registration.options[key] === value, `${registration.options[key]} !== ${value}`);
   }
 }
-check('registers eight slot occupants', registrations.length === 8, `got ${registrations.length}`);
+check('registers nine slot occupants', registrations.length === 9, `got ${registrations.length}`);
 
 // Render every occupant (hooks are stubbed) so obvious component errors fail here.
 const text = (key) => `translated:${key}`;
@@ -356,5 +358,5 @@ if (failures.length > 0) {
   for (const failure of failures) console.error(`  - ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log('PASS — manifest, resources, host half, palette, locale, wallpaper assets and 8 slot occupants verified.');
+  console.log('PASS — manifest, resources, host half, palette presets, locale, wallpaper assets and 9 slot occupants verified.');
 }

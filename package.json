@@ -1,6 +1,6 @@
 {
   "name": "dsh-nahida-theme",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "纳西妲主题：草元素绿意配色 + 四叶草徽记 + 祝福语 + 飘落叶片 + 15 张可自选聊天区壁纸｜A Nahida theme for the DeepSeek Harness (DSH) Web GUI with a four-leaf-clover mark, a localized blessing line, drifting leaves, and 15 selectable chat wallpapers. Made with DSH.",
   "type": "module",
   "main": "lib/index.js",
